@@ -1,7 +1,7 @@
 [project]
-name = "mlx-transcribe"
+name = "src"
 version = "0.1.0"
-description = "Audio transcription with speaker diarization, optimized for Apple Silicon using MLX Whisper"
+description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
@@ -13,9 +13,4 @@ dependencies = [
     "python-dotenv>=1.2.1",
     "soundfile>=0.13.1",
     "torch>=2.9.0",
-]
-
-[tool.uv.workspace]
-members = [
-    "src",
 ]

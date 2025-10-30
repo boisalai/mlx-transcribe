@@ -6,6 +6,12 @@ resolution-markers = [
     "python_full_version < '3.13'",
 ]
 
+[manifest]
+members = [
+    "mlx-transcribe",
+    "src",
+]
+
 [[package]]
 name = "aiohappyeyeballs"
 version = "2.6.1"
@@ -1114,6 +1120,33 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/41/95/a00054a006df82bb1b5b8f666ae44a676b259146fadbff90fe654309fefc/mlx_metal-0.29.3-py3-none-macosx_13_0_arm64.whl", hash = "sha256:27b5a4d905202a71e84d9fd559ea0236813f6f960ef494e5cafe9c45df4c9d7c", size = 36817352, upload-time = "2025-10-17T19:19:25.801Z" },
     { url = "https://files.pythonhosted.org/packages/c0/d8/5ee91eac16dfcf0334103120b47d4abd8c890ccc0d73d3eee4770ce8810f/mlx_metal-0.29.3-py3-none-macosx_14_0_arm64.whl", hash = "sha256:f426d4b67f96b4d6f0ed50d5992933595aadb370dc3e9ed2410bafbc16229882", size = 36555573, upload-time = "2025-10-17T19:18:42.098Z" },
     { url = "https://files.pythonhosted.org/packages/cd/9a/39b7ecdf21cf2a39ced8d7933eed65c6cb38295cadfd0907dd1abd4d1ded/mlx_metal-0.29.3-py3-none-macosx_15_0_arm64.whl", hash = "sha256:106616f7f825851043c53d3dc186965c003985da9cbb6e5c034f35108fc1fc27", size = 36549163, upload-time = "2025-10-17T19:18:37.701Z" },
+]
+
+[[package]]
+name = "mlx-transcribe"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "mlx-whisper" },
+    { name = "onnxruntime" },
+    { name = "pyannote-audio" },
+    { name = "pyaudio" },
+    { name = "pydub" },
+    { name = "python-dotenv" },
+    { name = "soundfile" },
+    { name = "torch" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "mlx-whisper", specifier = ">=0.4.3" },
+    { name = "onnxruntime", specifier = ">=1.23.2" },
+    { name = "pyannote-audio", specifier = ">=4.0.1" },
+    { name = "pyaudio", specifier = ">=0.2.14" },
+    { name = "pydub", specifier = ">=0.25.1" },
+    { name = "python-dotenv", specifier = ">=1.2.1" },
+    { name = "soundfile", specifier = ">=0.13.1" },
+    { name = "torch", specifier = ">=2.9.0" },
 ]
 
 [[package]]
@@ -2462,6 +2495,33 @@ wheels = [
 ]
 
 [[package]]
+name = "src"
+version = "0.1.0"
+source = { virtual = "src" }
+dependencies = [
+    { name = "mlx-whisper" },
+    { name = "onnxruntime" },
+    { name = "pyannote-audio" },
+    { name = "pyaudio" },
+    { name = "pydub" },
+    { name = "python-dotenv" },
+    { name = "soundfile" },
+    { name = "torch" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "mlx-whisper", specifier = ">=0.4.3" },
+    { name = "onnxruntime", specifier = ">=1.23.2" },
+    { name = "pyannote-audio", specifier = ">=4.0.1" },
+    { name = "pyaudio", specifier = ">=0.2.14" },
+    { name = "pydub", specifier = ">=0.25.1" },
+    { name = "python-dotenv", specifier = ">=1.2.1" },
+    { name = "soundfile", specifier = ">=0.13.1" },
+    { name = "torch", specifier = ">=2.9.0" },
+]
+
+[[package]]
 name = "sympy"
 version = "1.14.0"
 source = { registry = "https://pypi.org/simple" }
@@ -2679,33 +2739,6 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/a8/4b/29b4ef32e036bb34e4ab51796dd745cdba7ed47ad142a9f4a1eb8e0c744d/tqdm-4.67.1.tar.gz", hash = "sha256:f8aef9c52c08c13a65f30ea34f4e5aac3fd1a34959879d7e59e63027286627f2", size = 169737, upload-time = "2024-11-24T20:12:22.481Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/d0/30/dc54f88dd4a2b5dc8a0279bdd7270e735851848b762aeb1c1184ed1f6b14/tqdm-4.67.1-py3-none-any.whl", hash = "sha256:26445eca388f82e72884e0d580d5464cd801a3ea01e63e5601bdff9ba6a48de2", size = 78540, upload-time = "2024-11-24T20:12:19.698Z" },
-]
-
-[[package]]
-name = "transcript"
-version = "0.1.0"
-source = { virtual = "." }
-dependencies = [
-    { name = "mlx-whisper" },
-    { name = "onnxruntime" },
-    { name = "pyannote-audio" },
-    { name = "pyaudio" },
-    { name = "pydub" },
-    { name = "python-dotenv" },
-    { name = "soundfile" },
-    { name = "torch" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "mlx-whisper", specifier = ">=0.4.3" },
-    { name = "onnxruntime", specifier = ">=1.23.2" },
-    { name = "pyannote-audio", specifier = ">=4.0.1" },
-    { name = "pyaudio", specifier = ">=0.2.14" },
-    { name = "pydub", specifier = ">=0.25.1" },
-    { name = "python-dotenv", specifier = ">=1.2.1" },
-    { name = "soundfile", specifier = ">=0.13.1" },
-    { name = "torch", specifier = ">=2.9.0" },
 ]
 
 [[package]]
