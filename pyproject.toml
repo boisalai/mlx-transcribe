@@ -1,0 +1,16 @@
+[project]
+name = "mlx-transcribe"
+version = "0.1.0"
+description = "Audio transcription with speaker diarization, optimized for Apple Silicon using MLX Whisper"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "mlx-whisper>=0.4.3",
+    "onnxruntime>=1.23.2",
+    "pyannote-audio>=4.0.1",
+    "pyaudio>=0.2.14",
+    "pydub>=0.25.1",
+    "python-dotenv>=1.2.1",
+    "soundfile>=0.13.1",
+    "torch>=2.9.0",
+]
